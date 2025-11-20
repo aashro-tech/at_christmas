@@ -1,0 +1,26 @@
+<div class="footer_section layout_padding padding_top_90">
+ <div class="container">
+    <f:if condition="{data.tx_mask_header_info}">
+       <div class="date_main">{data.tx_mask_header_info -> f:format.html()}</div>
+    </f:if>
+    <div class="contact_section">
+       <div class="row">
+          <div class="col-lg-4 col-sm-12">
+             <f:if condition="{data.tx_mask_contact_form}">
+                <f:for each="{data.tx_mask_contact_form}" as="data_item">
+                    <f:cObject typoscriptObjectPath="lib.tx_mask.content">{data_item.uid}</f:cObject>
+                </f:for>
+            </f:if>
+          </div>
+          <f:if condition="{data.tx_mask_map}">
+              <div class="col-lg-8 col-sm-12 map-con">
+                 <div class="map_main">
+                    <div class="map-responsive">
+                       <f:format.raw>{data.tx_mask_map}</f:format.raw>
+                    </div>
+                 </div>
+              </div>
+          </f:if>
+       </div>
+    </div>
+</div>

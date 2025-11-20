@@ -1,0 +1,22 @@
+<div class="about_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <f:if condition="{data.tx_mask_about_icon}">
+                    <div class="tree_icon">
+                        <f:for each="{data.tx_mask_about_icon}" as="file"><img src="{f:uri.image(image: '{file}', width: 51, height: 69)}" alt="{file.alternative}" /></f:for>
+                    </div>
+                </f:if>
+                <f:if condition="{data.tx_mask_abouttext}"><f:format.html>{data.tx_mask_abouttext}</f:format.html></f:if>
+                <f:if condition="{data.tx_mask_readlink} && {data.tx_mask_readbtn}">
+                    <div class="readmore_bt"><f:link.typolink parameter="{data.tx_mask_readlink}">{data.tx_mask_readbtn}</f:link.typolink></div>
+                </f:if>
+            </div>
+            <f:if condition="{data.tx_mask_treeimg}">
+                <div class="col-md-6 about-con_img">
+                    <f:for each="{data.tx_mask_treeimg}" as="file"><img src="{f:uri.image(image: '{file}', width: 594, height:650)}" alt="{file.alternative}" /></f:for>
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>

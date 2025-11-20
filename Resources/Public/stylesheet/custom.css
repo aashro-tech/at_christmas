@@ -1,0 +1,316 @@
+/*header*/
+.header_section{
+  float: unset;
+}
+
+.banner_section{
+    float: unset;
+}
+
+.btn-a-black {
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #1a1a1a;
+  padding: 10px 30px;
+  border-radius: 40px;
+  text-align: center;
+}
+.btn-a-black:hover {
+    color: #ffffff;
+    background-color: #ff3f5c;
+}
+/* Banner */
+.header_section {
+    background-image: none;
+}
+
+.banner_section h1{
+  width: 100%;
+  float: left;
+  font-size: 50px;
+  color: #ffffff;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+}
+.banner_section h2 {
+  width: 100%;
+  float: left;
+  font-size: 100px;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+}
+.banner_section h4 {
+  width: 100%;
+  float: left;
+  font-size: 30px;
+  color: #ffffff;
+  font-family: 'Great Vibes', cursive;
+  text-align: center;
+  padding-top: 115px;
+}
+/* about */
+.about_section h1 {
+  width: 70%;
+  float: left;
+  font-size: 50px;
+  color: #292c29;
+  font-weight: bold;
+  position: relative;
+  text-transform: uppercase;
+}
+.about_section h1::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 10px;
+  background-color: #e81d42;
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+  display: block;
+  border-radius: 100px;
+}
+.about_section p {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #292c29;
+  margin: 0px;
+  padding-top: 30px;
+}
+.about_section h1 span.text-muted{
+  color: #ff3f5c !important;
+}
+
+/* testimonial */
+.testimonial_section p{
+  width: 70%;
+  font-size: 16px;
+  text-align: center;
+  margin: 0 auto;
+  color: #262626;
+  padding-top: 110px;
+}
+.testimonial_section h2 {
+  width: 100%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #28313c;
+  text-align: center;
+  padding-top: 30px;
+}
+/* Holidays Section */
+.holiday_taital_main h1 {
+  width: 100%;
+  float: left;
+  font-size: 40px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.holiday_taital_main h1::after {
+  content: '';
+  position: absolute;
+  width: 65px;
+  height: 10px;
+  background-color: #ffffff;
+  border-radius: 100px;
+  left: 0px;
+  right: initial;
+  display: block;
+  bottom: -10px;
+}
+
+.holiday_taital_main h2 {
+  width: 100%;
+  float: left;
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: uppercase;
+  padding-top: 40px;
+}
+
+.holiday_taital_main p {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0px;
+  padding-top: 20px;
+}
+
+.confirmation .testimonial_section h1.testimonial_taital::after { display: none; }
+
+/* contact */
+.footer_section h1 {
+  width: 20%;
+  float: left;
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  border-right: 5px solid #e81d42;
+}
+.footer_section p{
+  width: 100%;
+  float: left;
+  font-size: 16px;
+  color: #fff;
+  margin-left: 0px;
+  padding-left: 25px;
+}
+.contact_taital{
+  padding-top: 0px;
+  padding-bottom: 40px;
+}
+.map-con{
+    padding-top: 110px;
+}
+.confirmation .testimonial_taital{
+    font-size: 24px;
+    color: white;
+}
+.send_btn button {
+  width: 100%;
+  float: left;
+  color: #fefeff;
+  font-size: 18px;
+  padding: 10px 0px;
+  background-color: #f0b016;
+  border-radius: 30px;
+}
+.ce-textpic, .ce-image, .ce-nowrap .ce-bodytext, .ce-gallery, .ce-row, .ce-uploads li, .ce-uploads div {
+  overflow: visible;
+}
+.map-responsive iframe {
+    width: 100%;
+}
+
+/* Media Query */
+
+@media(max-width: 991px) {
+    .contact_taital{
+        padding-bottom: 30px;
+    }
+    .map-con{
+        padding-top: 50px !important;
+    }
+    .about-con_img{
+        margin-top: 30px;
+    }
+    .testimonial_section{
+        margin-top: 0px;
+    }
+    .confirmation .testimonial_taital{
+        font-size: 24px;
+        color: white;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .banner_section h4 {
+        font-size: 30px;
+        padding-top: 80px;
+    }
+    .about_section h1 {
+        width: 82%;
+    }
+    .footer_section h1 {
+        width: 25%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .banner_section h2 {
+        font-size: 82px;
+    }
+    .banner_section h4 {
+        font-size: 30px;
+        color: #000;
+        padding-top: 0;
+    }
+    .about_section h1 {
+        width: 100%;
+        font-size: 44px;
+    }
+    .footer_section h1 {
+        width: 40%;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .banner_section h1 {
+        font-size: 40px;
+        padding-top: 0px;
+    }
+    .banner_section h2 {
+        font-size: 50px;
+        color: #000;
+    }
+    .banner_section h4 {
+        font-size: 30px;
+        color: #000;
+        padding-top: 0;
+    }
+    .about_section h1 {
+        width: 55%;
+        font-size: 38px;
+    }
+    .testimonial_section p {
+        width: 100%;
+        font-size: 16px;
+        padding-top: 190px;
+    }
+    .holidays_section h1 {
+        font-size: 30px;
+    }
+    .holidays_section h2 {
+        font-size: 16px;
+    }
+    .footer_section h1 {
+        width: 100%;
+        float: left;
+    }
+    .footer_section p {
+        padding-left: 0px;
+    }
+}
+
+@media (max-width: 575px) {
+    .banner_section h1 {
+        font-size: 24px;
+        padding-top: 0px;
+    }
+    .banner_section h2 {
+        font-size: 50px;
+        color: #000;
+    }
+    .banner_section h4 {
+        font-size: 30px;
+        color: #000;
+        padding-top: 0;
+    }
+    .about_section h1 {
+        width: 100%;
+        font-size: 38px;
+    }
+    .testimonial_section p {
+        width: 100%;
+        font-size: 16px;
+        padding-top: 160px;
+    }
+    .holidays_section h1 {
+        font-size: 30px;
+    }
+    .holidays_section h2 {
+        font-size: 16px;
+    }
+    .footer_section h1 {
+        width: 100%;
+        float: left;
+    }
+    .footer_section p {
+        padding-left: 0px;
+    }
+
+}

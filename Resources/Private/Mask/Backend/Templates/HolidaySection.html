@@ -1,0 +1,40 @@
+<style type="text/css">
+    .holiday_img { width: 85%; position: relative; top: -115px; }
+    .holiday_taital_main h1 { color: #ffffff; font-weight: bold; font-size: 40px; }
+    .holiday_taital_main h1::after { content: ''; position: relative; width: 65px; height: 10px; background-color: #ffffff; border-radius: 100px; display: block; bottom: -10px; }
+    .holiday_taital_main h2 { font-size: 14.6px; color: #ffffff; text-transform: uppercase; padding-top: 40px; }
+    .holiday_taital_main p{ font-size: 15px; color: #ffffff; margin: 0px; padding-top: 20px; }
+    .read_bt_2 { width: 170px; margin-top: 10px; }
+    .read_bt_2 a { width: 100%; float: left; font-size: 18px; color: #ffffff; background-color: #262626; padding: 7px 5px; border-radius: 4px; text-align: center; pointer-events: none; }
+</style>
+<div class="holidays_section layout_padding" style="padding-top: 107px;">
+    <div class="container-fluid" style="padding-left: 0px;">
+        <div class="background_bg" style="background-color: #e81d42; height: 440px;">
+            <div class="container">
+                <div class="row" style="margin-left: 90px; margin-right: 58px;">
+                    <div class="col-md-6">
+                        <f:if condition="{data.tx_mask_holidayimg}">
+                            <div class="holiday_img">
+                                <f:for each="{data.tx_mask_holidayimg}" as="file"><img src="{f:uri.image(image: '{file}', width: 542)}" alt="{file.alternative}" /></f:for>
+                            </div>
+                        </f:if>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="holiday_taital_main" style="padding: 60px 0px 30px 0px;">
+                             <f:if condition="{data.tx_mask_holiday_info}">
+                                {data.tx_mask_holiday_info -> f:format.raw()}
+                            </f:if>
+                            <f:if condition="{data.tx_mask_holidaylink}">
+                                <div class="read_bt_2">
+                                    <f:link.typolink parameter="{data.tx_mask_holidaylink}">
+                                        <f:if condition="{data.tx_mask_btntxt}">{data.tx_mask_btntxt}</f:if>
+                                    </f:link.typolink>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

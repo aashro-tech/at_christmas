@@ -1,0 +1,23 @@
+TYPO3:
+  CMS:
+    Form:
+      persistenceManager:
+        allowedExtensionPaths:
+          110: EXT:at_christmas/Resources/Private/Forms/
+        allowSaveToExtensionPaths: true
+        allowDeleteFromExtensionPaths: true
+      prototypes:
+        standard:
+          finishersDefinition:
+            Confirmation:
+              options:
+                templateName: 'Confirmation'
+                templateRootPaths:
+                  10: 'EXT:at_christmas/Resources/Private/Extensions/Form/Templates/Finishers/Confirmation/'
+          formElementsDefinition:
+            Form:
+              renderingOptions:
+                templateRootPaths:
+                  20: 'EXT:at_christmas/Resources/Private/Extensions/Form/Templates/'
+                partialRootPaths:
+                  20: 'EXT:at_christmas/Resources/Private/Extensions/Form/Partials/'

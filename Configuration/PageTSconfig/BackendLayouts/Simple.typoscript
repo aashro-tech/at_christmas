@@ -1,0 +1,37 @@
+mod {
+  web_layout {
+    BackendLayouts {
+      # BACKENDLAYOUT: SIMPLE
+      simple {
+        title = LLL:EXT:at_christmas/Resources/Private/Language/BELayouts/locallang.xlf:palette.home
+        icon = EXT:at_christmas/Resources/Public/Icons/BELayouts/default.gif
+        config {
+          backend_layout {
+            colCount = 12
+            rowCount = 2
+            rows {
+              1 {
+                columns {
+                  1 {
+                    name = LLL:EXT:at_christmas/Resources/Private/Language/BELayouts/locallang.xlf:column.banner
+                    colPos = 1
+                    colspan = 12
+                  }
+                }
+              }
+              2 {
+                columns {
+                  1 {
+                    name = LLL:EXT:at_christmas/Resources/Private/Language/BELayouts/locallang.xlf:default
+                    colPos = 2
+                    colspan = 12
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+<f:if condition="{data.tx_mask_banner_backimg}">
+  <f:variable name="backimg"><f:uri.image image="{data.tx_mask_banner_backimg.0}" /></f:variable>
+    <f:asset.css identifier="banner">
+        .header_section{
+          background: url("{backimg}");
+          background-size: 100%;
+          background-repeat: no-repeat;
+        }
+    </f:asset.css>
+</f:if>
+<f:asset.css identifier="banner-responsive">
+    @media (max-width: 575px) {
+      .header_section {
+        background-size: cover;
+      }
+    }
+</f:asset.css>
+<f:if condition="{data.tx_mask_banner}">
+    <div class="banner_section layout_padding">
+        <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <f:for each="{data.tx_mask_banner}" as="data_item" iteration="i">
+                    <div class="carousel-item {f:if(condition: '{i.isFirst}', then: 'active')}">
+                        <div class="container">
+                             <f:if condition="{data_item.tx_mask_slider_desc}">
+                                <f:format.html>{data_item.tx_mask_slider_desc}</f:format.html>
+                            </f:if>
+                            <div class="read_bt">
+                                <f:if condition="{data_item.tx_mask_button} && {data_item.tx_mask_btnlink}">
+                                    <f:link.typolink parameter="{data_item.tx_mask_btnlink}">{data_item.tx_mask_button}</f:link.typolink>
+                                </f:if>
+                            </div>
+                        </div>
+                    </div>
+                </f:for>
+            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev"><i class="fa fa-angle-up"></i></a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next"><i class="fa fa-angle-down"></i></a>
+        </div>
+    </div>
+</f:if>

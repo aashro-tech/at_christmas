@@ -1,0 +1,48 @@
+<style type="text/css">
+    .testimonial_taital { width: 100%; float: left; font-size: 50px; color: #292c29; font-weight: bold; text-align: center; text-transform: uppercase; }
+    .tree_icon_2 { width: 65%; float: right; position: relative; top: 14px; left: 7px; }
+    .image_2{text-align: center;}
+    .testimonial_section_2 { background-image: url(/fileadmin/at_christmas/testimonial-bg.png); height: auto; background-size: 130%; background-repeat: no-repeat; background-position: center; padding-bottom: 100px; }
+    .image_6 { width: 30%; margin: 0 auto; text-align: center; padding-top: 100px; }
+    .testimonial_section p { width: 66%; font-size: 16px; text-align: center; margin: 0 auto; color: #262626; padding-top: 30px; }
+    .testimonial_section h2 { width: 100%; font-size: 24px; font-weight: bold; color: #28313c; text-align: center; padding-top: 30px; }
+</style>
+<div class="testimonial_section layout_padding">
+    <div class="container">
+        <f:if condition="{data.tx_mask_treeicon}">
+            <div class="tree_icon_2">
+                <f:for each="{data.tx_mask_treeicon}" as="file"><img src="{f:uri.image(image: '{file}', width: 51)}" alt="{file.alternative}" /></f:for>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_testitle}"><h1 class="testimonial_taital">{data.tx_mask_testitle}</h1></f:if>
+        <f:if condition="{data.tx_mask_centerimg}">
+            <div class="image_2">
+               <f:for each="{data.tx_mask_centerimg}" as="file"><img src="{f:uri.image(image: '{file}', width: 524)}" alt="{file.alternative}" /></f:for> 
+            </div>
+        </f:if>
+    </div>
+    <div class="testimonial_section_2">
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <f:if condition="{data.tx_mask_testrpt}">
+                    <f:for each="{data.tx_mask_testrpt}" as="data_item" iteration="i">
+                        <div class="carousel-item {f:if(condition: '{i.isFirst}', then: 'active')}" style="text-align: center;">
+                            <div class="container">
+                                <f:if condition="{data_item.tx_mask_picture}">
+                                    <div class="image_6">
+                                        <f:for each="{data_item.tx_mask_picture}" as="file">
+                                            <img src="{f:uri.image(image: '{file}', width: 444)}" alt="{file.alternative}" />
+                                        </f:for>
+                                    </div>
+                                </f:if>
+                                <f:if condition="{data_item.tx_mask_information}">
+                                  {data_item.tx_mask_information -> f:format.raw()}
+                               </f:if>
+                            </div>
+                        </div>
+                    </f:for>
+                </f:if>
+            </div>
+        </div>
+    </div>
+</div>

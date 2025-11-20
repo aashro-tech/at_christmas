@@ -1,0 +1,836 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "sys_file_reference": {
+            "sql": {
+                "tx_mask_image": {
+                    "sys_file_reference": {
+                        "tx_mask_image": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            }
+        },
+        "tt_content": {
+            "elements": {
+                "about_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_about_icon",
+                        "tx_mask_abouttext",
+                        "tx_mask_readbtn",
+                        "tx_mask_readlink",
+                        "tx_mask_treeimg"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "Add icon which is display upon header of section.",
+                        "Add description.",
+                        "Add button label.",
+                        "Add button link.",
+                        "Upload image from here."
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "about_section",
+                    "label": "About Section",
+                    "labels": [
+                        "Heading Icon",
+                        "Description",
+                        "Button Label",
+                        "Button Link",
+                        "Left Image"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "banner_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_banner_backimg",
+                        "tx_mask_banner"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "Add Background image for slider.",
+                        "Create new slider items from here."
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "banner_section",
+                    "label": "Banner Section",
+                    "labels": [
+                        "Back-ground Image",
+                        "Slider Item"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 9
+                },
+                "contact_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_header_info",
+                        "tx_mask_contact_form",
+                        "tx_mask_map"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "Add header information.",
+                        "Select form to display at left side.",
+                        "To add your location, need to open your place in google maps and click on your added place in maps. Then, click on Share button which is display at Left side. Then, click on 'Embed a map' and Click on 'Copy HTML' . Then, paste copied link here."
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "contact_section",
+                    "label": "Contact Section",
+                    "labels": [
+                        "Header Information",
+                        "Contact Form",
+                        "Map location"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "gift_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_treeicon",
+                        "tx_mask_giftitle",
+                        "tx_mask_img",
+                        "tx_mask_rptimg"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "Add icon which is display upon header of section.",
+                        "Add title.",
+                        "Upload main image.",
+                        "Create new slide items."
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "gift_section",
+                    "label": "Gift Section",
+                    "labels": [
+                        "Heading Icon",
+                        "Title",
+                        "Image",
+                        "Slider Items"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "holiday_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_holidayimg",
+                        "tx_mask_holiday_info",
+                        "tx_mask_btntxt",
+                        "tx_mask_holidaylink"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "Upload image.",
+                        "Add content displayed at right side.",
+                        "Add button label.",
+                        "Add button link."
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "holiday_section",
+                    "label": "Holiday Section",
+                    "labels": [
+                        "Image",
+                        "Description",
+                        "Button Label",
+                        "Button Link"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 0
+                },
+                "testimonial_section": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_treeicon",
+                        "tx_mask_testitle",
+                        "tx_mask_centerimg",
+                        "tx_mask_testrpt"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        "Add icon which is display upon header of section.",
+                        "Add Heading.",
+                        "Upload image.",
+                        "Create new items for Testimonial."
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "testimonial_section",
+                    "label": "Testimonial Section",
+                    "labels": [
+                        "Heading Icon",
+                        "Heading",
+                        "Image",
+                        "Reviews Slider Item"
+                    ],
+                    "shortLabel": "",
+                    "sorting": 10
+                }
+            },
+            "sql": {
+                "tx_mask_about_icon": {
+                    "tt_content": {
+                        "tx_mask_about_icon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_abouttext": {
+                    "tt_content": {
+                        "tx_mask_abouttext": "mediumtext"
+                    }
+                },
+                "tx_mask_banner": {
+                    "tt_content": {
+                        "tx_mask_banner": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_banner_backimg": {
+                    "tt_content": {
+                        "tx_mask_banner_backimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_btntxt": {
+                    "tt_content": {
+                        "tx_mask_btntxt": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_centerimg": {
+                    "tt_content": {
+                        "tx_mask_centerimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_contact_form": {
+                    "tt_content": {
+                        "tx_mask_contact_form": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_giftitle": {
+                    "tt_content": {
+                        "tx_mask_giftitle": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_header_info": {
+                    "tt_content": {
+                        "tx_mask_header_info": "mediumtext"
+                    }
+                },
+                "tx_mask_holiday_info": {
+                    "tt_content": {
+                        "tx_mask_holiday_info": "mediumtext"
+                    }
+                },
+                "tx_mask_holidayimg": {
+                    "tt_content": {
+                        "tx_mask_holidayimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_holidaylink": {
+                    "tt_content": {
+                        "tx_mask_holidaylink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_img": {
+                    "tt_content": {
+                        "tx_mask_img": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_map": {
+                    "tt_content": {
+                        "tx_mask_map": "mediumtext"
+                    }
+                },
+                "tx_mask_readbtn": {
+                    "tt_content": {
+                        "tx_mask_readbtn": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_readlink": {
+                    "tt_content": {
+                        "tx_mask_readlink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_rptimg": {
+                    "tt_content": {
+                        "tx_mask_rptimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_testitle": {
+                    "tt_content": {
+                        "tx_mask_testitle": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_testrpt": {
+                    "tt_content": {
+                        "tx_mask_testrpt": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_treeicon": {
+                    "tt_content": {
+                        "tx_mask_treeicon": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_treeimg": {
+                    "tt_content": {
+                        "tx_mask_treeimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_about_icon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_about_icon",
+                    "imageoverlayPalette": 1,
+                    "key": "about_icon",
+                    "type": "file"
+                },
+                "tx_mask_abouttext": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "required": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_abouttext",
+                    "key": "abouttext",
+                    "type": "richtext"
+                },
+                "tx_mask_banner": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_banner",
+                    "key": "banner",
+                    "type": "inline"
+                },
+                "tx_mask_banner_backimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_banner_backimg",
+                    "imageoverlayPalette": 1,
+                    "key": "banner_backimg",
+                    "type": "file"
+                },
+                "tx_mask_btntxt": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_btntxt",
+                    "key": "btntxt",
+                    "type": "string"
+                },
+                "tx_mask_centerimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_centerimg",
+                    "imageoverlayPalette": 1,
+                    "key": "centerimg",
+                    "type": "file"
+                },
+                "tx_mask_contact_form": {
+                    "cTypes": [
+                        "form_formframework"
+                    ],
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "tt_content",
+                        "maxitems": "1",
+                        "overrideChildTca": {
+                            "columns": {
+                                "colPos": {
+                                    "config": {
+                                        "default": 999
+                                    }
+                                }
+                            }
+                        },
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_contact_form",
+                    "key": "contact_form",
+                    "type": "content"
+                },
+                "tx_mask_giftitle": {
+                    "config": {
+                        "nullable": 0,
+                        "required": 1,
+                        "size": "15",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_giftitle",
+                    "key": "giftitle",
+                    "type": "string"
+                },
+                "tx_mask_header_info": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "required": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_header_info",
+                    "key": "header_info",
+                    "type": "richtext"
+                },
+                "tx_mask_holiday_info": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "type": "text"
+                    },
+                    "fullKey": "tx_mask_holiday_info",
+                    "key": "holiday_info",
+                    "type": "richtext"
+                },
+                "tx_mask_holidayimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_holidayimg",
+                    "imageoverlayPalette": 1,
+                    "key": "holidayimg",
+                    "type": "file"
+                },
+                "tx_mask_holidaylink": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_holidaylink",
+                    "key": "holidaylink",
+                    "type": "link"
+                },
+                "tx_mask_img": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_img",
+                    "imageoverlayPalette": 1,
+                    "key": "img",
+                    "type": "file"
+                },
+                "tx_mask_map": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_map",
+                    "key": "map",
+                    "type": "text"
+                },
+                "tx_mask_readbtn": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "15",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_readbtn",
+                    "key": "readbtn",
+                    "type": "string"
+                },
+                "tx_mask_readlink": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "fullKey": "tx_mask_readlink",
+                    "key": "readlink",
+                    "type": "link"
+                },
+                "tx_mask_rptimg": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "minitems": "1",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_rptimg",
+                    "key": "rptimg",
+                    "type": "inline"
+                },
+                "tx_mask_testitle": {
+                    "config": {
+                        "nullable": 0,
+                        "size": "10",
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_testitle",
+                    "key": "testitle",
+                    "type": "string"
+                },
+                "tx_mask_testrpt": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "minitems": "1",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_testrpt",
+                    "key": "testrpt",
+                    "type": "inline"
+                },
+                "tx_mask_treeicon": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_treeicon",
+                    "imageoverlayPalette": 1,
+                    "key": "treeicon",
+                    "type": "file"
+                },
+                "tx_mask_treeimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "fullKey": "tx_mask_treeimg",
+                    "imageoverlayPalette": 1,
+                    "key": "treeimg",
+                    "type": "file"
+                }
+            }
+        },
+        "tx_mask_banner": {
+            "sql": {
+                "tx_mask_btnlink": {
+                    "tx_mask_banner": {
+                        "tx_mask_btnlink": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_button": {
+                    "tx_mask_banner": {
+                        "tx_mask_button": "mediumtext"
+                    }
+                },
+                "tx_mask_slider_desc": {
+                    "tx_mask_banner": {
+                        "tx_mask_slider_desc": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_btnlink": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "link"
+                    },
+                    "description": "Add button link",
+                    "fullKey": "tx_mask_btnlink",
+                    "inlineParent": "tx_mask_banner",
+                    "key": "btnlink",
+                    "label": "Button Link",
+                    "order": 3,
+                    "type": "link"
+                },
+                "tx_mask_button": {
+                    "config": {
+                        "cols": "15",
+                        "nullable": 0,
+                        "rows": "1",
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "description": "Add button label.",
+                    "fullKey": "tx_mask_button",
+                    "inlineParent": "tx_mask_banner",
+                    "key": "button",
+                    "label": "Button Label",
+                    "order": 2,
+                    "type": "text"
+                },
+                "tx_mask_slider_desc": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "required": 1,
+                        "type": "text"
+                    },
+                    "description": "Add slider's description.",
+                    "fullKey": "tx_mask_slider_desc",
+                    "inlineParent": "tx_mask_banner",
+                    "key": "slider_desc",
+                    "label": "Description",
+                    "order": 1,
+                    "type": "richtext"
+                }
+            }
+        },
+        "tx_mask_rptimg": {
+            "sql": {
+                "tx_mask_sliderimg": {
+                    "tx_mask_rptimg": {
+                        "tx_mask_sliderimg": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_sliderimg": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "maxitems": "1",
+                        "minitems": "1"
+                    },
+                    "description": "Add Slider image.",
+                    "fullKey": "tx_mask_sliderimg",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_rptimg",
+                    "key": "sliderimg",
+                    "label": "Slider Image",
+                    "order": 1,
+                    "type": "file"
+                }
+            }
+        },
+        "tx_mask_testrpt": {
+            "sql": {
+                "tx_mask_information": {
+                    "tx_mask_testrpt": {
+                        "tx_mask_information": "mediumtext"
+                    }
+                },
+                "tx_mask_picture": {
+                    "tx_mask_testrpt": {
+                        "tx_mask_picture": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_information": {
+                    "config": {
+                        "enableRichtext": 1,
+                        "required": 1,
+                        "type": "text"
+                    },
+                    "description": "Add client reviews.",
+                    "fullKey": "tx_mask_information",
+                    "inlineParent": "tx_mask_testrpt",
+                    "key": "information",
+                    "label": "Content",
+                    "order": 2,
+                    "type": "richtext"
+                },
+                "tx_mask_picture": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": "1"
+                    },
+                    "description": "Add client picture.",
+                    "fullKey": "tx_mask_picture",
+                    "imageoverlayPalette": 1,
+                    "inlineParent": "tx_mask_testrpt",
+                    "key": "picture",
+                    "label": "Picture",
+                    "order": 1,
+                    "type": "file"
+                }
+            }
+        }
+    }
+}

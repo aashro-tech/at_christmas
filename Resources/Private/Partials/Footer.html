@@ -1,0 +1,17 @@
+<div class="footer_section layout_padding">
+  <div class="container">
+    <f:if condition="{FooterMenuSocialMedia}">
+      <div class="social_icon">
+        <ul>
+          <f:for each="{FooterMenuSocialMedia}" as="item">
+            <li>
+              <a href="{item.link}" target="{f:if(condition: item.target, then: '{item.target}')}">
+                <f:if condition="{item.navIcon}"><img src="{f:uri.image(image: '{item.navIcon.0.originalFile}', width: 24, height: 24)}" alt="{item.navIcon.0.alternative}" /></f:if>
+              </a>
+            </li>
+          </f:for>
+        </ul>
+    </f:if>
+  </div>
+  <f:if condition="{settings.copyright}"><div class="copyright_section"><div class="container"><p class="copyright_text">{settings.copyright}</p></div></div></f:if>
+</div>

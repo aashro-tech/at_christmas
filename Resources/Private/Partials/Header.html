@@ -1,0 +1,49 @@
+<div class="{f:if(condition: '{data.uid} == {settings.rootpage}', then: 'header_section', else: 'header_section header_bg')}">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <f:if condition="{settings.rootpage}">
+            <f:link.typolink parameter="{settings.rootpage}" class="logo">
+                <f:if condition="{settings.logo}">
+                  <f:image src="{settings.logo}" alt="Crism Logo" />
+                </f:if>
+            </f:link.typolink>
+        </f:if>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto"><f:render section="MainMenu" arguments="{_all}" /></ul>
+        </div>
+        <div class="main">
+           <form class="form-inline my-2 my-lg-0">
+              <div class="call_text">
+                 <ul>
+                    <li>
+                        <a href="tel:{settings.contactno}">
+                        <f:if condition="{settings.logocall}"><f:image src="{settings.logocall}" alt="Contact" /></f:if><span class="padding_left_10">{settings.contactno}</span></a></li>
+                    <li><a href="mailto:{settings.emailid}">
+                        <f:if condition="{settings.logomail}"><f:image src="{settings.logomail}" alt="Email" /></f:if><span class="padding_left_10">{settings.emailid}</span></a></li>
+                 </ul>
+              </div>
+           </form>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <f:cObject typoscriptObjectPath="lib.bannerContent" />
+    
+    <f:if condition="{data.uid} == {settings.rootpage}">
+        <f:then>
+            <div id="navbar" class="menu_main">
+                <div class="menu_right"><div class="costum_menu"><f:render section="MainMenu" arguments="{_all}" /></div></div>
+            </div>
+        </f:then>
+    </f:if>
+    
+    <!-- Banner Section End --> 
+</div>
+
+<f:section name="MainMenu">
+    <f:if condition="{MainMenu}">
+        <f:for each="{MainMenu}" as="item" iteration="i">
+            <li class="nav-item {f:if(condition: '{item.data.doktype} == 4 && {item.data.shortcut} == {data.uid} || {item.current} || {item.active}', then: 'active')}"><a class="nav-link" href="{f:uri.typolink(parameter: item.link)}" title="{item.title}">{item.title}</a></li>
+        </f:for>
+    </f:if>
+</f:section>

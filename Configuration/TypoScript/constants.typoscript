@@ -1,0 +1,76 @@
+########################
+### General Settings ###
+########################
+
+# customsubcategory=header=Header 
+# customsubcategory=110=Footer
+# customsubcategory=130=Other
+
+at_christmas {
+    website {
+        settings {
+
+            #cat = at_christmas/header/a; type=string; label=Upload Logo
+            logo = /fileadmin/at_christmas/logo.png
+            
+            #cat = at_christmas/header/b; type=string; label=Favicon Icon
+            favicon = fileadmin/at_christmas/Favicon/santa-claus.png
+
+            #cat = at_christmas/header/c; type=string; label=Contact Icon
+            logocall = /fileadmin/at_christmas/call-icon.png
+
+            #cat = at_christmas/header/d; type=string; label=Contact No
+            contactno =
+
+            #cat = at_christmas/header/e; type=string; label=E-mail Icon
+            logomail = /fileadmin/at_christmas/mail-icon.png
+
+            #cat = at_christmas/header/f; type=string; label=E-mail Address
+            emailid =
+
+            #cat = at_christmas/header/g; type=int; label=Main Menu Id
+            main_menu = 
+
+            #cat = at_christmas/110//h; type=int; label=Footer Menu Id
+            footer_menu = 
+
+            #cat = at_christmas/110//i; type=int; label=Footer Social Media
+            footersm =
+
+            #cat = at_christmas/110//j; type=string; label=Root Page Id
+            rootpage = 
+
+            #cat = at_christmas/110//k; type=string; label=Copyright Text: Write down your footer's copyright content
+            copyright = Copyright 2024 All Right Reserved By Aashro Tech
+
+            #cat = at_christmas/130/1; type=boolean; label=Disable TYPO3 Cache
+            no_cache = 0
+            
+            #cat = at_christmas/130/02; type=boolean; label=Compress JavaScript
+            compress_js = 
+
+            #cat = at_christmas/130/03; type=boolean; label=Compress CSS
+            compress_Css =
+
+            #cat = at_christmas/130/04; type=boolean; label=Concatenate JavaScript
+            concatenate_js =
+
+            #cat = at_christmas/130/05; type=boolean; label=Concatenate CSS
+            concatenate_css =
+
+            #cat = at_christmas/130/6; type=string; label=Default Meta Robots: Set meta robots data
+            seo_robots_default = FOLLOW,INDEX
+
+            #cat = at_christmas/130/7; type=string; label=Google Analytics ID: Setup Google Analytics Tracking ID to enable Google access to track your website
+            googleanalytics =
+
+        }
+
+        # Define paths for templates, layout and partial
+        paths {
+            templateRootPath = EXT:at_christmas/Resources/Private/Templates/
+            layoutRootPath = EXT:at_christmas/Resources/Private/Layouts/
+            partialRootPath = EXT:at_christmas/Resources/Private/Partials/
+        }
+    }
+}

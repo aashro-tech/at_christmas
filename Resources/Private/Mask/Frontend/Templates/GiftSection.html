@@ -1,0 +1,26 @@
+<div class="gifts_section layout_padding">
+    <div class="container">
+        <f:if condition="{data.tx_mask_treeicon}">
+            <div class="tree_icon_1">
+                <f:for each="{data.tx_mask_treeicon}" as="file"><img src="{f:uri.image(image: '{file}', width: 51)}" alt="{file.alternative}" /></f:for>
+            </div>
+        </f:if>
+        <f:if condition="{data.tx_mask_giftitle}"><h1 class="gifts_taital">{data.tx_mask_giftitle}</h1></f:if>
+        <f:if condition="{data.tx_mask_img}">
+            <div class="image_2">
+                <f:for each="{data.tx_mask_img}" as="file"><img src="{f:uri.image(image: file, width: '524', height: '561')}" alt="{file.alternative}" /></f:for>
+            </div>
+        </f:if>
+    </div>
+    <div class="gifts_section_2 layout_padding">
+        <div class="owl-carousel owl-theme">
+            <f:if condition="{data.tx_mask_rptimg}">
+                <f:for each="{data.tx_mask_rptimg}" as="data_item">
+                    <div class="item">
+                        <f:for each="{data_item.tx_mask_sliderimg}" as="file"><img src="{f:uri.image(image: '{file}', width: 808, height: 404)}" alt="{file.alternative}" /></f:for>
+                    </div>
+                </f:for>
+            </f:if>
+        </div>
+    </div>
+</div>

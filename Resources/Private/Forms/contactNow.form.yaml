@@ -1,0 +1,152 @@
+
+renderingOptions:
+  submitButtonLabel: SEND
+type: Form
+identifier: contactNow
+label: 'Contact Now'
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{textarea-1}'
+      recipients:
+        '{email-1}': '{text-1}'
+      senderAddress: aashro.info@gmail.com
+      senderName: Aashro
+      addHtmlPart: true
+      attachUploads: true
+      title: 'Helloww Guiseee !!  Santa Here....'
+    identifier: EmailToSender
+  -
+    options:
+      subject: '{textarea-1}'
+      recipients:
+        aashro.info@gmail.com: Aashro
+      senderAddress: '{email-1}'
+      senderName: '{text-1}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+  -
+    options:
+      message: 'You are Registered successfully.....'
+      contentElementUid: ''
+    identifier: Confirmation
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: 'Previous step'
+      nextButtonLabel: 'Next step'
+    type: Page
+    identifier: page-1
+    label: ''
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Name
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Name must required !'
+            -
+              code: 1221560718
+              message: 'Name must required !'
+            -
+              code: 1347992400
+              message: 'Name must required !'
+            -
+              code: 1347992453
+              message: 'Name must required !'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: ''
+        properties:
+          elementDescription: ''
+          fluidAdditionalAttributes:
+            placeholder: Email
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Email must required !'
+            -
+              code: 1221560718
+              message: 'Email must required !'
+            -
+              code: 1347992400
+              message: 'Email must required !'
+            -
+              code: 1347992453
+              message: 'Email must required !'
+            -
+              code: 1221559976
+              message: 'Email address is invalid !'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Telephone
+        identifier: telephone-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: 'Phone number'
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Phone number must required !'
+            -
+              code: 1221560718
+              message: 'Phone number must required !'
+            -
+              code: 1347992400
+              message: 'Phone number must required !'
+            -
+              code: 1347992453
+              message: 'Phone number must required !'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: ''
+        properties:
+          fluidAdditionalAttributes:
+            placeholder: Message
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Please give some message !'
+            -
+              code: 1221560718
+              message: 'Please give some message !'
+            -
+              code: 1347992400
+              message: 'Please give some message !'
+            -
+              code: 1347992453
+              message: 'Please give some message !'
+        validators:
+          -
+            identifier: NotEmpty

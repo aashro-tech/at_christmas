@@ -1,0 +1,31 @@
+<div class="holidays_section layout_padding">
+    <div class="container-fluid">
+        <div class="background_bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <f:if condition="{data.tx_mask_holidayimg}">
+                            <div class="holiday_img">
+                                <f:for each="{data.tx_mask_holidayimg}" as="file"><img src="{f:uri.image(image: file, width: '486', height: '677')}" alt="{file.alternative}" /></f:for>
+                            </div>
+                        </f:if>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="holiday_taital_main">
+                            <f:if condition="{data.tx_mask_holiday_info}">
+                                {data.tx_mask_holiday_info -> f:format.html()}
+                            </f:if>
+                            <f:if condition="{data.tx_mask_holidaylink}">
+                                <div class="read_bt_2">
+                                    <f:link.typolink parameter="{data.tx_mask_holidaylink}">
+                                        <f:if condition="{data.tx_mask_btntxt}">{data.tx_mask_btntxt}</f:if>
+                                    </f:link.typolink>
+                                </div>
+                            </f:if>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

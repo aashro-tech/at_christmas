@@ -1,0 +1,147 @@
+################
+### CONSTANT ###
+################
+
+plugin {
+    at_christmas {
+        settings {
+            logo = {$at_christmas.website.settings.logo}
+            logocall = {$at_christmas.website.settings.logocall}
+            contactno = {$at_christmas.website.settings.contactno}
+            logomail = {$at_christmas.website.settings.logomail}
+            emailid = {$at_christmas.website.settings.emailid}
+            logosearch = {$at_christmas.website.settings.logosearch}
+            rootpage = {$at_christmas.website.settings.rootpage}
+            copyright = {$at_christmas.website.settings.copyright}
+        }
+    }
+}
+
+########################
+### MAIN PAGE OBJECT ###
+########################
+
+page = PAGE
+page {
+
+    // Set default page typenum
+    typeNum = 0
+
+    // Setup favion
+    shortcutIcon = {$at_christmas.website.settings.favicon}
+
+    // Set viewport
+    meta {
+        viewport = width=device-width, initial-scale=1.0
+    }
+
+    headerData{
+        10 = TEXT
+        10.value{
+        }
+    }
+
+    // Initiate all the css-together
+    includeCSS {
+        10 = EXT:at_christmas/Resources/Public/stylesheet/bootstrap.min.css
+        20 = EXT:at_christmas/Resources/Public/stylesheet/style.css
+        40 = EXT:at_christmas/Resources/Public/stylesheet/responsive.css
+        50 = EXT:at_christmas/Resources/Public/stylesheet/jquery.mCustomScrollbar.min.css
+        60 = EXT:at_christmas/Resources/Public/stylesheet/font-awesome.min.css
+        70 = https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext
+        80 = EXT:at_christmas/Resources/Public/stylesheet/owl.carousel.min.css
+        90 = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css
+        100 = https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css
+        110 = EXT:at_christmas/Resources/Public/stylesheet/custom.css
+    }
+
+    includeJS{  
+        
+    }
+
+        // Initiate all the js-together
+    includeJSFooter {
+        40 = EXT:at_christmas/Resources/Public/javascript/jquery.min.js
+        50 = EXT:at_christmas/Resources/Public/javascript/popper.min.js
+        70 = EXT:at_christmas/Resources/Public/javascript/bootstrap.bundle.min.js
+        80 = EXT:at_christmas/Resources/Public/javascript/jquery-3.0.0.min.js
+        90 = EXT:at_christmas/Resources/Public/javascript/plugin.js
+        110 = EXT:at_christmas/Resources/Public/javascript/jquery.mCustomScrollbar.concat.min.js
+        120 = https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js
+        130 = EXT:at_christmas/Resources/Public/javascript/custom.js
+    }
+
+    // Let's start fluid_styled_content
+    10 = FLUIDTEMPLATE
+    10 {
+        layoutRootPath = {$at_christmas.website.paths.layoutRootPath}
+        partialRootPath = {$at_christmas.website.paths.partialRootPath}
+        templateRootPath = {$at_christmas.website.paths.templateRootPath}
+
+        // Let's automatically choose backend layout and template
+        file.stdWrap.cObject = CASE
+        file.stdWrap.cObject {
+            key {
+                data = levelfield:-1, backend_layout_next_level, slide
+                override.field = backend_layout
+            }
+
+            default = TEXT
+            default.value = {$at_christmas.website.paths.templateRootPath}Default.html
+        }
+
+        settings < plugin.at_christmas.settings
+
+        // Generate menu with DataProcessing
+        dataProcessing {
+
+            // Main menu
+            101 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            101 {
+                levels = 5
+                special = directory
+                special.value = {$at_christmas.website.settings.main_menu}
+                expandAll = 1
+                includeSpacer = 1
+                as = MainMenu
+            }
+
+            // Footer menu Social Media
+            104 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+            104 {
+                levels = 5
+                special = directory
+                special.value = {$at_christmas.website.settings.footersm}
+                expandAll = 1
+                as = FooterMenuSocialMedia
+                dataProcessing {
+                    110 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+                    110 {
+                        as = navIcon
+                        references.fieldName = media
+                        references.table = pages
+                    }
+                }
+            }
+        }
+    }
+}
+
+#########################
+### GLOBAL LIB OBJECT ###
+#########################
+
+lib {
+    // Define default content
+    content = CONTENT
+    content < styles.content.get
+
+    defaults < lib.content
+    defaults.select.where = colPos = 0
+
+    bannerContent < lib.content
+    bannerContent.select.where = colPos = 1
+
+    mainContent < lib.content
+    mainContent.select.where = colPos = 2
+}
